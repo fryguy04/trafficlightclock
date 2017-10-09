@@ -4,6 +4,7 @@ import time
 import traffic
 
 t = traffic.traffic()
+app = Flask(__name__, static_url_path="")
 
 @app.errorhandler(400)
 def not_found(error):
@@ -30,5 +31,4 @@ def set_color(color):
 
 
 if __name__ == '__main__':
-    app = Flask(__name__, static_url_path="")
     app.run(debug=True)
