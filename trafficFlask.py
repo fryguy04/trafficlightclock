@@ -3,7 +3,7 @@ from flask import Flask, jsonify, abort, request, make_response, url_for
 import time
 import traffic
 
-t = traffic()
+t = traffic.traffic()
 
 @app.errorhandler(400)
 def not_found(error):
