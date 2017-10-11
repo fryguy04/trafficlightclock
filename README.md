@@ -8,7 +8,7 @@ Background: My son has started waking up as soon as the sun comes up and yelling
 * Green (its morning, you can scream for us to come get you if we haven't already)
 (Update: It works AMAZINGLY well! 1+ week and he hasn't yet called for us before LED glows Green!)
 
-#Basic Functionality
+# Basic Functionality
 * ./traffic.py [on|off|red|yellow|green|check]
   * on|off - turns all LEDs On/Off
   * red|yellow|green - Lights only that color LED
