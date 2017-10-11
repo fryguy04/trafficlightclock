@@ -21,7 +21,7 @@ def get_time():
 
 @app.route('/traffic', methods=['GET'])
 def get_color():
-    return str(t.status())
+    return t.status()
 
 @app.route('/traffic/<color>', methods=['GET'])
 def set_color(color):

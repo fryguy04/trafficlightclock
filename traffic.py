@@ -43,15 +43,27 @@ class traffic:
     for color in self.colors:
       GPIO.setup(self.colors[color], GPIO.OUT)
 
+    # GPIO.setup(9, GPIO.OUT)    # Red    LED pin set as output
+    # GPIO.setup(10, GPIO.OUT)   # Yellow LED pin set as output
+    # GPIO.setup(11, GPIO.OUT)   # Green  LED pin set as output
+
     self.alloff()
 
   def alloff(self):
     for color in self.colors:
       GPIO.output(self.colors[color], False)
+    #GPIO.output(9,  False)
+    #GPIO.output(10, False)
+    #GPIO.output(11, False)
+
 
   def allon(self):
     for color in self.colors:
       GPIO.output(self.colors[color], True)
+
+    # GPIO.output(9,  True)
+    # GPIO.output(10, True)
+    # GPIO.output(11, True)
 
   def status(self):
     currStatus = {}
@@ -66,6 +78,10 @@ class traffic:
     else:
       self.alloff()
       GPIO.output(self.colors[color], True)
+
+    # if color == 'red':    GPIO.output(9, True)
+    # if color == 'yellow': GPIO.output(10, True)
+    # if color == 'green':  GPIO.output(11, True)
 
   def in_between(self, start, end):
     now = datetime.now().time()

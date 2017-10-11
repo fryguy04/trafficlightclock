@@ -5,7 +5,6 @@ try:
 except RuntimeError:
     print("Error importing RPi.GPIO! Try as root")
 
-# DEPRECATED ... Overly simple, first version. But works
 # Simple traffic light class to control Red/Yellow/Green LEDs on RaspPi
 # ./traffic.py (on|off|red|yellow|green)
 #
