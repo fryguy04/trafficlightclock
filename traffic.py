@@ -6,9 +6,10 @@ from datetime import datetime, time
 # ./traffic.py (on|off|red|yellow|green|check)
 
 # Todo:
-#   * When invoked, have this script determine time and verify appropriate
-#      color is glowing. Cron then calls every 5min and on boot.
-#   * Flask web server (green/yellow/red) to manually control
+#   Config file for time changes / flask port / PINs
+#   Error handling
+#   for fun, MQTT
+#   Alexa, turn traffic light red on
 #
 # Crontab
 #   Check every 5min
@@ -31,8 +32,8 @@ class traffic:
             }
 
   startRed    = time(20,0)
-  startYellow = time(7,20)
-  startGreen  = time(7,45)
+  startYellow = time(7,15)
+  startGreen  = time(7,30)
   startOff    = time(9,00)
  
   def __init__(self):
@@ -85,7 +86,7 @@ class traffic:
 
   def in_between(self, start, end):
     now = datetime.now().time()
-    #now = time(9,45)
+    #now = time(9,45)   # For testing
 
     if start <= end:
         return start <= now < end
@@ -93,7 +94,7 @@ class traffic:
         return start <= now or now < end
 
   def checktime(self):
-    # Red 8pm, yellow 7:20, Green 7:45, off 8:30am
+    # Red 8pm, yellow 7:15, Green 7:30, off 8:30am
  
     # Red
     if self.in_between(self.startRed, self.startYellow):
