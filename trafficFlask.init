@@ -17,6 +17,8 @@ do_start () {
 	log_action_msg "Will now switch to single-user mode"
 	cd /root/trafficlightclock/
 	exec python trafficFlask.py &
+	exec python fauxmo.py &
+
 }
 
 case "$1" in
