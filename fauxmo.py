@@ -392,13 +392,13 @@ FAUXMOS = [
     #['kitchen lights',
      #rest_api_handler('http://192.168.5.4/ha-api?cmd=on&a=kitchen', 'http://192.168.5.4/ha-api?cmd=off&a=kitchen')],
     ['traffic light red',
-     rest_api_handler('http://127.0.0.1:5000/traffic/red', 'http://127.0.0.1/traffic/off')],
+     rest_api_handler('http://127.0.0.1:5000/traffic/red', 'http://127.0.0.1:5000/traffic/off')],
     ['traffic light yellow',
-     rest_api_handler('http://127.0.0.1:5000/traffic/yellow', 'http://127.0.0.1/traffic/off')],
+     rest_api_handler('http://127.0.0.1:5000/traffic/yellow', 'http://127.0.0.1:5000/traffic/off')],
     ['traffic light green',
-     rest_api_handler('http://127.0.0.1:5000/traffic/green', 'http://127.0.0.1/traffic/off')],
+     rest_api_handler('http://127.0.0.1:5000/traffic/green', 'http://127.0.0.1:5000/traffic/off')],
     ['traffic light',
-     rest_api_handler('http://127.0.0.1:5000/traffic/on', 'http://127.0.0.1/traffic/off')],
+     rest_api_handler('http://127.0.0.1:5000/traffic/on', 'http://127.0.0.1:5000/traffic/off')],
 ]
 
 if len(sys.argv) > 1 and sys.argv[1] == '-d':
